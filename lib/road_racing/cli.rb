@@ -44,7 +44,7 @@ class RoadRacing::CLI
 
     def select 
         while @input != "exit"
-            puts "Select a track 1 - #{@tracks.count}"
+            puts "Select a track 1 - #{@tracks.count - 1}"
             list
             @input = gets.chomp.downcase
             if @input.to_i > 0 && @input.to_i < @tracks.count + 1

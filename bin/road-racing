@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require './lib/road_racing'
+# require 'bundler/setup'
+
+RoadRacing::CLI.new.call
+

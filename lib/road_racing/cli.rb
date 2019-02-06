@@ -23,7 +23,7 @@ class RoadRacing::CLI
 
     def scrape
         RoadRacing::Scraper.scrape_tracks
-        @tracks = RoadRacing::Tracks.all_tracks
+        @tracks = RoadRacing::Tracks.sorted_tracks
     end
     
     def list 
@@ -35,9 +35,17 @@ class RoadRacing::CLI
                 track.opened_date = "Unknown"
             end
 
+            
             if i != 0 
-                puts "#{i}. #{track.name}"
+                if i != @tracks.count - 1
+                    puts "#{i}. #{track.name}"
+                else 
+                    puts "" 
+                    puts "Select a track 1 - #{@tracks.count - 1}"
+                end
             end
+
+            
             
         end
         puts "OR 'EXIT' to exit the program"
@@ -51,7 +59,7 @@ class RoadRacing::CLI
             if @input.to_i > 0 && @input.to_i < @tracks.count + 1
                 puts "You selected #{@tracks[@input.to_i].name}" 
                 action
-            elsif @input == "exit" || "exit "
+            elsif @input == "exit"
                 puts "Game Over. You have exited the program!"
             else 
                 puts "Go Fish - Please enter a valid number from the in the list" 

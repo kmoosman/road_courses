@@ -19,5 +19,6 @@ class RoadRacing::Scraper
 
 end
 
-#create a scraper class 
-#bonus challenge list tracks, sort by name. Show and error when the number is out of range 
+#create a scraper class (Completed)
+#bonus challenge list tracks, sort by name. 
+#Show and error when the number is out of range (Completed) 

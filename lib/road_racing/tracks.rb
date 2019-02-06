@@ -10,4 +10,9 @@ class RoadRacing::Tracks
     def save
         @@tracks << self
     end
+
+    def self.sorted_tracks
+        @@tracks.sort_by {|track| track.name}.reverse
+    end
+
 end

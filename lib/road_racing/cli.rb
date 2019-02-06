@@ -22,6 +22,7 @@ class RoadRacing::CLI
     end
 
     def scrape
+        RoadRacing::Scraper.scrape_tracks
         @tracks = RoadRacing::Tracks.all_tracks
     end
     

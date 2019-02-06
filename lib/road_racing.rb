@@ -4,6 +4,7 @@ require "open-uri"
 require_relative "road_racing/version"
 require_relative "road_racing/cli"
 require_relative "road_racing/tracks"
+require_relative "road_racing/scraper"
 
 
 
